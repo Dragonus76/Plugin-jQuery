@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-type"  content="text/html;   charset=utf-8"/>
+
+  <title> Pluglin Rss / Atom parser FeedEk demo</title>
+  <title>Plugins</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://momentjs.com/downloads/moment-with-langs.min.js"></script>
+  <script src="js/FeedEk.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/FeedEk.css"/>
+  <style type="text/css">
+    body {
+
+      font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;background-color: gray;font-size: 13px;line-height: 17px !important; }
+    .rssDiv{float: left;padding-right: 35px;}
+    ul{width: 300px !important;}
+    }
+  </style>
+
+</head>
+<body>
+  
+
+
+  <h1>Le monde - A la Une</h1>
+  <div id="divRss"></div>
+
+
+  <script type="text/javascript">
+
+    $(document).ready(function () {
+        $('#divRss').FeedEk({
+            FeedUrl: 'http://www.lemonde.fr/rss/une.xml',
+            MaxCount: 10
+        });
+    });
+    
+   
+  </script>
+
+</body>
+</html>
